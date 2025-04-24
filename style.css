@@ -1,0 +1,586 @@
+
+        :root {
+            --primary: #1a73e8;
+            --secondary: #f8f9fa;
+            --accent: #ff6b6b;
+            --dark: #2d3436;
+            --light: #f5f6fa;
+            --gray: #636e72;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Navbar */
+        #navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .left-nav img {
+            height: 32px;
+        }
+        
+        .middle-nav {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .middle-nav div a {
+            font-weight: 600;
+            color: var(--dark);
+            transition: color 0.3s;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        
+        .middle-nav div a:hover {
+            color: var(--primary);
+        }
+        
+        .middle-nav div a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        .middle-nav div a:hover::after {
+            width: 100%;
+        }
+        
+        .right-nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .loginbtn, .registerbtn {
+            padding: 0.5rem 1.2rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .loginbtn {
+            background-color: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .loginbtn:hover {
+            background-color: rgba(26, 115, 232, 0.1);
+        }
+        
+        .registerbtn {
+            background-color: var(--primary);
+            border: 1px solid var(--primary);
+            color: white;
+        }
+        
+        .registerbtn:hover {
+            background-color: #0d5bc2;
+            border-color: #0d5bc2;
+        }
+        
+        #pipe {
+            height: 24px;
+            width: 1px;
+            background-color: #ddd;
+        }
+        
+        #emp {
+            font-weight: 600;
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            cursor: pointer;
+        }
+        
+        .drpdwn {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid var(--gray);
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 4rem 0 2rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .header div {
+            font-size: 1.2rem;
+            color: var(--gray);
+        }
+        
+        /* Search */
+        .Wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .logoContainer {
+            display: flex;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 0.5rem;
+            margin-top: -1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+        
+        #searchIcon {
+            width: 24px;
+            height: 24px;
+            margin: 0.5rem 1rem;
+            opacity: 0.6;
+        }
+        
+        .sugginput {
+            flex: 1;
+            border: none;
+            padding: 0.8rem;
+            font-size: 1rem;
+            outline: none;
+        }
+        
+        .pipe1 {
+            width: 1px;
+            background-color: #eee;
+            margin: 0.5rem 0;
+        }
+        
+        .search {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0 2rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .search:hover {
+            background-color: #0d5bc2;
+        }
+        
+        /* Widget */
+        .widget-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .wid-head-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .wid-head-container div {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary);
+            position: relative;
+            padding: 0 1rem;
+        }
+        
+        .wid-head-container div:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -1rem;
+            color: var(--gray);
+        }
+        
+        .widget-logo {
+            display: flex;
+            justify-content: space-around;
+            margin: 2rem 0;
+        }
+        
+        .widget-logo img {
+            height: 60px;
+            margin: 0 1rem;
+            filter: grayscale(100%);
+            opacity: 0.8;
+            transition: all 0.3s;
+        }
+        
+        .widget-logo img:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+        
+        .detail-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .detail-container div {
+            margin-bottom: 1rem;
+            color: var(--gray);
+        }
+        
+        .detail-container a {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .detail-container a:hover {
+            background-color: #0d5bc2;
+        }
+        
+        /* Sliders */
+        #Slidhsow-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+        
+        #trendHead {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            position: relative;
+        }
+        
+        #trendHead::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+            margin: 0.5rem auto;
+        }
+        
+        #main-slider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .slide {
+            flex: 0 0 calc(12.5% - 1rem);
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .slide:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .slide .images img {
+            height: 50px;
+            margin-bottom: 1rem;
+        }
+        
+        .slide .text h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .slide .text p {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .button {
+            background-color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: var(--box-shadow);
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--primary);
+            transition: all 0.3s;
+        }
+        
+        .button:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        /* Video Profile */
+        #videoProfile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 3rem;
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            border-radius: var(--border-radius);
+            color: white;
+        }
+        
+        .vidproTitle {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        #videoProfile p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+        
+        #videoProfile form {
+            display: flex;
+            margin-bottom: 1.5rem;
+        }
+        
+        #videoInput {
+            flex: 1;
+            padding: 0.8rem 1rem;
+            border: none;
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+            outline: none;
+        }
+        
+        #videoSubmit {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 0 1.5rem;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        #videoSubmit:hover {
+            background-color: #ff5252;
+        }
+        
+        #videoLogo {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        #videoLogo img {
+            height: 40px;
+            border-radius: var(--border-radius);
+        }
+        
+        #qrContainer {
+            text-align: center;
+        }
+        
+        #qrContainer img {
+            width: 100px;
+            margin-bottom: 0.5rem;
+        }
+        
+        #qrContainer p {
+            font-size: 0.9rem;
+        }
+        
+        #videoProfile > div:last-child img {
+            height: 200px;
+        }
+        
+        /* Footer */
+        #footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 4rem 5%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+        }
+        
+        #footer img {
+            height: 28px;
+            margin-bottom: 1.5rem;
+        }
+        
+        #connectUs p:first-child {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        #socailLogo {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        #socailLogo img {
+            height: 24px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        
+        #socailLogo img:hover {
+            opacity: 1;
+        }
+        
+        .footpcolor p {
+            margin-bottom: 0.8rem;
+            color: #b2bec3;
+            transition: color 0.3s;
+        }
+        
+        .footpcolor p:hover {
+            color: white;
+        }
+        
+        #appStore p:first-child {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        #appStore p:nth-child(2) {
+            color: #b2bec3;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        #appLogo {
+            display: flex;
+            gap: 0.8rem;
+        }
+        
+        #appLogo img {
+            height: 40px;
+            border-radius: var(--border-radius);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            #footer {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .middle-nav {
+                gap: 1rem;
+            }
+            
+            .slide {
+                flex: 0 0 calc(25% - 1rem);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            #navbar {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            
+            .middle-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .logoContainer {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            .pipe1 {
+                display: none;
+            }
+            
+            #videoProfile {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
+            }
+            
+            #videoProfile form {
+                flex-direction: column;
+            }
+            
+            #videoInput {
+                border-radius: var(--border-radius);
+                margin-bottom: 0.5rem;
+            }
+            
+            #videoSubmit {
+                border-radius: var(--border-radius);
+            }
+            
+            #videoLogo {
+                justify-content: center;
+                margin-bottom: 2rem;
+            }
+            
+            #footer {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            #connectUs, #socailLogo, #appLogo {
+                justify-content: center;
+            }
+        }

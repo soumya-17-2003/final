@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Advertisement Submission Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 25px;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    form fieldset {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #444;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="url"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: 1px solid #bbb;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Job Advertisement Submission Form</h1>
+    <p>* All fields marked with an asterisk are required.</p>
+    
+    <form action="">
+      <fieldset>
+        <legend>Company Information</legend>
+        
+        <label>Company Name: *<input type="text" name="companyName" required></label>
+        
+        <label>Company Logo:
+          <input type="file" name="companyLogo" accept="image/*">
+        </label>
+        
+        <label>Company Website: *<input type="url" name="companyWebsite" required></label>
+        
+        <label>Contact Email: *<input type="email" name="contactEmail" required></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Job Details</legend>
+        
+        <label>Job Title: *<input type="text" name="jobTitle" required></label>
+        
+        <label>Job Location: *<input type="text" name="jobLocation" required></label>
+        
+        <label>Job Type: *
+          <select name="jobType" required>
+            <option value="">Select Job Type</option>
+            <option value="full-time">Full-time</option>
+            <option value="part-time">Part-time</option>
+            <option value="internship">Internship</option>
+            <option value="contract">Contract</option>
+          </select>
+        </label>
+        
+        <label>Salary Range: *<input type="text" name="salaryRange" required></label>
+        
+        <label>Job Description: *<textarea name="jobDescription" rows="4" required></textarea></label>
+        
+        <label>Qualifications: *<textarea name="qualifications" rows="3" required></textarea></label>
+        
+        <label>Application Deadline: *<input type="date" name="applicationDeadline" required></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Application Process</legend>
+        
+        <label>How to Apply: *<textarea name="howToApply" rows="3" required></textarea></label>
+        
+        <label>Contact Person for Inquiries: *<input type="text" name="contactPerson" required></label>
+        
+        <label>Contact Phone Number: *<input type="tel" name="contactPhone" required></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Information</legend>
+        
+        <label>Benefits Offered:<textarea name="benefits" rows="2"></textarea></label>
+        
+        <label>Diversity and Inclusion Statement:<textarea name="diversityStatement" rows="2"></textarea></label>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

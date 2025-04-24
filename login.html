@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | rojGar.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar">
+        <div id="logo">
+            <a class="nLogo fl" href="index.html">
+                <img src="rojgar1.jpg" alt="rojgar.com, India's No.1 Job Site">
+            </a>            
+        </div>
+        <div id="links">
+            <div><a href="JobPage1.html">JOBS</a></div>
+            <div><a href="#">RECRUITERS</a></div>
+            <div><a href="#">COMPANIES</a></div>
+            <div><a href="#">TOOLS</a></div>
+            <div><a href="servises.html">SERVICES</a></div>
+            <div><a href="login.html">LOGIN</a></div>
+            <div><a href="#">FOR EMPLOYERS</a></div>
+        </div>    
+    </div>
+    <hr>
+
+    <!-- Main Container -->
+    <div id="container">
+        <!-- Feature Section -->
+        <div id="feature">
+            <h3>New to Rojgar.com</h3>
+            <ul id="point">
+                <li>One click apply using Rojgar.com profile.</li>
+                <li>Get relevant job recommendations.</li>
+                <li>Showcase profile to top companies and consultants.</li>
+                <li>Know application status on applied jobs.</li>
+            </ul>
+            <div onclick="window.location.href='register.html'" id="register">Register Now</div>
+            <div id="symRegister">
+                <img src="https://static.naukimg.com/s/5/105/i/register.png" class="registerimage">
+            </div>                 
+        </div>
+
+        <!-- Login Section -->
+        <div id="loginPart">
+            <form id="form" method="POST" action="login.php">
+                <h3>Login</h3>
+                <p>Email ID / Username</p>
+                <input type="email" name="email" placeholder="Enter Email ID/username" required>
+                <p>Password</p>
+                <input type="password" name="password" placeholder="Enter Password" required>
+                <input type="submit" id="login" value="Login">
+                <p id="result"></p>
+                <p class="otp">Use OTP to Login</p>
+                <hr>
+                <a class="socialbtn">
+                    <img class="google-icon" src="https://static.naukimg.com/s/5/105/i/ic-google.png">
+                    <p>Sign in with Google</p>
+                </a>
+            </form>            
+        </div>
+    </div> 
+
+    <!-- <script src="/Scripts/login.js"></script>  -->
+</body>
+</html>

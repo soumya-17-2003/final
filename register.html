@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | rojGar.com</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header">
+        <div>
+            <a href="index.html"></a>
+                <img src="rojgar1.jpg" alt="rojGar.com">
+            </a>
+        </div>
+        <div>
+            <p>Already Registered?<a href="login.html">Login</a> here</p>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Main Content -->
+    <div class="main">
+        <!-- Left Container -->
+        <div class="left-container">
+            <div id="static-part">
+                <div class="static-point">
+                    <img src="https://static.naukimg.com/s/7/104/assets/images/green-boy.c8b59289.svg" alt="Register Benefits">
+                    <h2>On registering, you can</h2>
+                    <ul>
+                        <li><i class="fas fa-check"></i><p>Build your profile and let recruiters find you</p></li>
+                        <li><i class="fas fa-check"></i><p>Get job postings delivered right to your email</p></li>
+                        <li><i class="fas fa-check"></i><p>Find a job and grow your career</p></li>
+                    </ul>
+                </div>              
+            </div>            
+        </div>
+
+        <!-- Right Container -->
+        <div class="right-container">
+            <!-- Registration Form -->
+            <form id="form" action="register.php" method="POST">
+                <h1>Find a job & grow your career</h1>
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" placeholder="What is your name?" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Id</label>
+                    <input type="email" name="email" placeholder="Tell us your Email ID" id="email" required>
+                    <p>We'll send you relevant jobs in your mail</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pass">Password</label>
+                    <input type="password" name="pass" placeholder="Create a password for your account" id="pass" required>
+                    <p>Password is required</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Mobile</label>
+                    <input type="tel" name="phone" placeholder="Mobile Number" id="phone" required>
+                    <p>Recruiters will call you on this number</p>
+                </div>
+            
+                <!-- You can keep the additional content below this (work status, resume upload, etc.) as-is if it’s not affecting PHP -->
+                
+                <button type="submit" class="register">Register Now</button>
+            </form>
+            
+            <!-- Google Sign-in -->
+            <div class="google-box">
+                <h3>Continue with</h3>
+                <div class="google">
+                    <img src="https://static.naukimg.com/s/7/104/assets/images/google-icon.9273ac87.svg" alt="Google">
+                    <h4>Google</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
